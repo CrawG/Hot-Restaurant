@@ -13,18 +13,18 @@ app.use(express.json());
 // =============================================================
 var reservations = [
   {
-    name: "test",
-    Phone: "test",
-    email: "test",
-    uniqueId: 123
+    customerName: "test",
+    phoneNumber: "test",
+    customerEmail: "test",
+    customerID: 123
   },
 ];
 var waitList = [
   {
-    name: "test2",
-    Phone: "test2",
-    email: "test2",
-    uniqueId: 456
+    customerName: "test2",
+    phoneNumber: "test2",
+    customerEmail: "test2",
+    customerID: 456
   }
 ]
 // Routes
@@ -75,5 +75,3 @@ res.json(newwaitList)
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
-
-
