@@ -1,0 +1,23 @@
+{
+  "name": "15-hotrestaurant",
+  "version": "1.0.0",
+  "description": "make reservations",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hot restaurant"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Kyle Ward, Crawford Smith, Kirby Reese, Rachel Moore",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
