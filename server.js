@@ -5,7 +5,7 @@ var path = require("path");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = 3000;
+var PORT = 4040;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -51,16 +51,24 @@ app.get("/api/characters/:character", function(req, res) {
   }
   return res.json(false);
 });
-// Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+// Create New reservations - takes in JSON input
+app.post("/api/reservations", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body parsing middleware
-  var newcharacter = req.body;
-  console.log(newcharacter);
+  var newwaitList = req.body;
+  var newreservation = req.body;
+  console.log(newreservation);
+  if (reservations.length <= 5) {
   // We then add the json the user sent to the character array
-  characters.push(newcharacter);
+  reservations.push(newreservation);
   // We then display the JSON to the users
-  res.json(newcharacter);
+  res.json(newreservation)
+}
+  else {
+waitList.push(newwaitList);
+// We then display the JSON to the users
+res.json(newwaitList)
+}
 });
 // Starts the server to begin listening
 // =============================================================
