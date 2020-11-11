@@ -70,6 +70,8 @@ waitList.push(newwaitList);
 res.json(newwaitList)
 }
 });
+
+
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function() {
